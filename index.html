@@ -6,28 +6,66 @@
   <title>윤시온 | Sion Yun</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+      padding: 60px 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #f8c8dc;
+      display: flex;
+      justify-content: center;
     }
-    h1, h2 {
-      margin-bottom: 10px;
+  
+    .container {
+      width: 100%;
+      max-width: 900px;
     }
+  
     section {
-      margin-bottom: 40px;
+      background: white;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     }
-    a {
-      text-decoration: none;
+  
+    h1, h2, h3 {
+      margin-top: 0;
     }
+  
     ul {
       padding-left: 20px;
     }
+  
+    a {
+      text-decoration: none;
+      color: #d63384;
+      font-weight: 500;
+    }
+  
+    /* Projects */
+    #projects-wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  
     .project {
-      margin-bottom: 20px;
+      flex: 1;
+      min-width: 280px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #f2f2f2;
+      transition: transform 0.2s ease;
+    }
+  
+    .project:hover {
+      transform: translateY(-4px);
+    }
+  
+    @media (max-width: 768px) {
+      #projects-wrapper {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -59,34 +97,36 @@
   <section>
     <h2>Projects</h2>
 
-    <div class="project">
-      <h3>Sunway ATS</h3>
-      <p><strong>Tech:</strong> Svelte, SvelteKit, Figma</p>
-      <!-- 9/2025 – 12/2025 -->
-      <p>
-        Implemented front-end features of the new Sunway ATS (Applicant Tracking System) web app for recruiters across Sunway Group, using Svelte / SvelteKit, Bootstrap 4, and Django templates.
-        Designed (Figma) and implemented UI/UX including component behavior and front-end rendering logic.
-      </p>
-      <p>
-        <strong>Impact:</strong>
-        Improved HR workflow efficiency, shortening 3 - 4 working days to 1 - 2 days by enabling auto-populated profiles and structured submission forms.
-        Reduced HR manual data entry by ~40% with integrated candidate profiles and supporting documents.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>AlphaLife: Mobile Protein Visualization</h3>
-      <p><strong>Tech:</strong>Flutter, Firebase</p>
-      <!-- 07/2024 – 06/2025 -->
-      <p>
-        Developed an Android mobile app visualizing AlphaFold3 protein structures using NGLViewer in Flutter WebView as a final year project.
-      </p>
-      <p>
-        <strong>Role:</strong>
-        Led Agile collaboration of 4 team members with weekly standups, and arranged communication with project stakeholders.
-        Designed (Figma) and implemented UI/UX including component behavior and front-end rendering logic.
-      </p>
-      <p><a href="https://github.com/sionyun/AlphaLife">GitHub</a></p>
+    <div id="projects-wrapper">
+      <div class="project">
+        <h3>Sunway ATS</h3>
+        <p><strong>Tech:</strong> Svelte, SvelteKit, Figma</p>
+        <!-- 9/2025 – 12/2025 -->
+        <p>
+          Implemented front-end features of the new Sunway ATS (Applicant Tracking System) web app for recruiters across Sunway Group, using Svelte / SvelteKit, Bootstrap 4, and Django templates.
+          Designed (Figma) and implemented UI/UX including component behavior and front-end rendering logic.
+        </p>
+        <p>
+          <strong>Impact:</strong>
+          Improved HR workflow efficiency, shortening 3 - 4 working days to 1 - 2 days by enabling auto-populated profiles and structured submission forms.
+          Reduced HR manual data entry by ~40% with integrated candidate profiles and supporting documents.
+        </p>
+      </div>
+  
+      <div class="project">
+        <h3>AlphaLife: Mobile Protein Visualization</h3>
+        <p><strong>Tech:</strong>Flutter, Firebase</p>
+        <!-- 07/2024 – 06/2025 -->
+        <p>
+          Developed an Android mobile app visualizing AlphaFold3 protein structures using NGLViewer in Flutter WebView as a final year project.
+        </p>
+        <p>
+          <strong>Role:</strong>
+          Led Agile collaboration of 4 team members with weekly standups, and arranged communication with project stakeholders.
+          Designed (Figma) and implemented UI/UX including component behavior and front-end rendering logic.
+        </p>
+        <p><a href="https://github.com/sionyun/AlphaLife">GitHub</a></p>
+      </div>
     </div>
 
   </section>
